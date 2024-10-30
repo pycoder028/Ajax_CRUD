@@ -11,7 +11,7 @@
               </div>
               <div class="modal-body">
 
-                <div class="errMsgContainer">
+                <div class="errMsgContainer mb-3">
 
                 </div>
 
