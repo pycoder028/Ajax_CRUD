@@ -24,6 +24,7 @@
                 if(res.status == 'success'){
                     $('#addModal').modal('hide');
                     $('#addProductForm')[0].reset();
+                    $('.table').load(location.href+' .table');
                 }
             },error:function(err){
                 let error = err.responseJSON;
@@ -31,7 +32,6 @@
                     $('.errMsgContainer').append('<span class="text-danger">'+value+'</span>'+'<br>');
                 });
             }
-
            });
 
         });

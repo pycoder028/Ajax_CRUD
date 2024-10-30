@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class productController extends Controller
 {
     public function products(){
+        $products = Product::latest()->paginate(5);
 
-        return view('products');
+        return view('products', compact('products'));
     }
 
     public function addProduct(Request $request){
