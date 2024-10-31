@@ -56,5 +56,12 @@ class productController extends Controller
             'status' => 'success',
         ]);
     }
+    
+    public function deleteProduct(Request $request){
+        Product::findOrFail($request->product_id)->delete();
+        return response()->json([
+            'status' => 'success',
+        ]);
+    }
 
 }
